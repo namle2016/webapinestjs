@@ -1,0 +1,91 @@
+1. Dowload và cài đặt NodeJS
+https://nodejs.org/en/download/
+2. Run CMD 
+npm install -g @nestjs/cli
+3. Tạo dự á mới
+nest new webapinestjs
+4. Chạy test
+
+cd project_Name
+npm run start
+
+http://127.0.0.1:3000
+#swagger
+npm install --save @nestjs/swagger swagger-ui-express
+#Main.ts
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+
+#kill port
+npx kill-port 3000
+
+------------
+#cài đặt thư viện
+npm install -g @nestjs/cli 
+
+#tạo dự án
+nest new bookstore-nest 
+
+#chạy dự án
+npm run start  hoặc npm run start :dev
+
+#tạo controller
+nest g controller users
+
+#tạo module
+nest generate module users
+ 
+
+#tạo service 
+nest generate service users
+
+#Hoặc 
+nest g resource catalogs
+
+
+#swagger
+npm install --save @nestjs/swagger
+#Cấu hình lại trang main.ts 
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Yaly NestJS API')
+    .setDescription('The YALY NestJS API ')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+  await app.listen(3000);
+}
+bootstrap();
+
+#JWT token
+npm install --save @nestjs/jwt
+npm install --save @nestjs/passport
+npm install --save passport-jwt
+npm install --save @nestjs/passport passport passport-jwt
+npm install --save passport-jwt
+###
+npm install --save @nestjs/jwt jsonwebtoken
+npm install bcryptjs 
+
+#Typeorm
+npm install --save @nestjs/typeorm typeorm pg
+
+#Setup dotenv
+npm install dotenv
+#class-transformer - @Exclude()
+npm install class-transformer
+#bcrypt
+npm install bcrypt
+#crypto-js
+npm install crypto-js
+#multer uploads file
+npm install multer @nestjs/platform-express
+#jwt
+npm install --save @nestjs/jwt
+
