@@ -1,3 +1,18 @@
+#GIT
+echo "# webapinestjs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/namle2016/webapinestjs.git
+git push -u origin main
+
+#CheckIn
+git remote add origin https://github.com/namle2016/webapinestjs.git
+git branch -M main
+git push -u origin main
+--------------------------
+
 1. Dowload và cài đặt NodeJS
 https://nodejs.org/en/download/
 2. Run CMD 
